@@ -1,0 +1,189 @@
+
+{% extends 'base.html' %}
+
+{% block contenido %}
+    {% load static %}
+    <header class="header_area">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container box_1620">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <a class="navbar-brand logo_h" href=""><img src="" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                <ul class="nav navbar-nav menu_nav justify-content-end">
+                  <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">{{menu1}}</a></li> 
+                  <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">{{menu2}}</a></li>
+                </ul>
+              </div> 
+            </div>
+          </nav>
+        </div>
+    </header>
+    <section class="hero-banner hero-banner--sm mb-30px">
+        <div class="container">
+          <div class="hero-banner--sm__content">
+            <h1>Característica</h1>
+            <nav aria-label="breadcrumb" class="banner-breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Característica</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+<section class="section-margin">
+    <div class="container">
+      <div class="section-intro pb-85px text-center">
+        <h2 class="section-intro__title"></h2>
+        <p class="section-intro__subtitle">Sistema 100% diseñado a la medida del cliente, cumpliendo con todos sus requisitos y necesidades  </p>
+      </div>
+
+      <div class="container"id="mas">
+        <div class="row" >
+          <div class="col-lg-4">
+            <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+              <span class="card-feature__icon">
+                <i class="ti-package"></i>
+              </span>
+              <h3 class="card-feature__title">Diseño único</h3>
+              <p class="card-feature__subtitle">Interfaz amigable e intuitiva para los usuarios. </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+              <span class="card-feature__icon">
+                <i class="ti-mouse-alt"></i>
+              </span>
+              <h3 class="card-feature__title">Solucion</h3>
+              <p class="card-feature__subtitle">Agilizar los procesos internos, garantizando la seguridad de los datos </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-feature text-center text-lg-left mb-4 mb-lg-0">
+              <span class="card-feature__icon">
+                <i class="ti-headphone-alt"></i>
+              </span>
+              <h3 class="card-feature__title">Adaptabilidad </h3>
+              <p class="card-feature__subtitle">Compatible con dispositivos de diversos tamaños</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Feature section end =================-->      
+  
+  <!--================ about section start =================-->      
+  <section class="section-padding--small bg-magnolia">
+    <div class="container">
+      <div class="row no-gutters align-items-center">
+        <div class="col-md-5 mb-5 mb-md-0">
+          <div class="about__content">
+            <h2>Inventario</h2>
+            <p>El software se encargará de administra y gestionar el inventario, por medio de su módulo de movimientos el cual es el responsable de alojar toda la información de las categorías y de los productos que las componen, fechas y tipos de movientes realizados. </p>
+            <a class="button button-light" href="{% url 'detalles' %}">saber más</a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="about__img">
+            <img class="img-fluid" src="{% static 'assets/img/home/about.png'%} " alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ about section end =================-->      
+  
+  <!--================ Offer section start =================-->      
+  <section class="section-margin">
+    <div class="container">
+      <div class="section-intro pb-85px text-center">
+        <h2 class="section-intro__title">CARACTERÍSTICAS Que Ofrecemos</h2>
+        <p class="section-intro__subtitle">Seguridad y privacidad de la información, tiempos mínimos en la respuesta del sistema, soporte técnico </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="row offer-single-wrapper">
+            <div class="col-lg-6 offer-single">
+              <div class="card offer-single__content text-center">
+                <span class="offer-single__icon">
+                  <i class="ti-pencil-alt"></i>
+                </span>
+                <h4>Fácil de manejar</h4>
+                <p></p>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 offer-single">
+              <div class="card offer-single__content text-center">
+                <span class="offer-single__icon">
+                  <i class="ti-ruler-pencil"></i>
+                </span>
+                <h4>Herramientas analíticas</h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row offer-single-wrapper">
+            <div class="col-lg-6 offer-single">
+              <div class="card offer-single__content text-center">
+                <span class="offer-single__icon">
+                  <i class="ti-cut"></i>
+                </span>
+                <h4>Herramientas profesionales</h4>
+                <p></p>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 offer-single">
+              <div class="card offer-single__content text-center">
+                <span class="offer-single__icon">
+                  <i class="ti-light-bulb"></i>
+                </span>
+                <h4>Contenido listo</h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="offer-single__img">
+            <img class="img-fluid" src="{% static 'assets/img/home/offer.png'%}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Offer section end =================-->      
+
+  <!--================ Solution section start =================-->      
+  <section class="section-padding--small bg-magnolia">
+    <div class="container">
+      <div class="row align-items-center pt-xl-3 pb-xl-5">
+        <div class="col-lg-6">
+          <div class="solution__img text-center text-lg-left mb-4 mb-lg-0">
+            <img class="img-fluid" src="{% static 'assets/img/home/solution.png'%}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="solution__content">
+            <h2>Soluciones a </h2>
+            <p>Mala inversión de tiempo y recursos en actividades simples, perdida o daño de la información, confusión en el manejo de los pagos, mala asignación de los roles de trabajo </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Solution section end =================-->            
+  {% endblock %}

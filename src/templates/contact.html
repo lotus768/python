@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+
+{% block contenido%} 
+  {% load static %}
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href=""><img src="" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">inicio</a></li> 
+              <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+</header>
+  <section class="hero-banner hero-banner--sm mb-30px">
+    <div class="container">
+      <div class="hero-banner--sm__content">
+        <h1>Contacto</h1>
+        <nav aria-label="breadcrumb" class="banner-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contacta con nosotros</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <section class="section-margin">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-headphone"></i></span>
+            <div class="media-body">
+              <h3><a href="tel:454545654">305 450 4265</a></h3>
+              <p>Lun a vie 9am a 6pm</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+              <h3><a href="mailto:support@colorlib.com">bholguinb@gmail.com</a></h3>
+              <p>Envíenos su consulta en cualquier momento!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-lg-9"id="contact">
+           <!--<form class="form-contact contact_form" action=" " method="POST" id="contactForm" >
+            <div class="row">
+              <div class="col-lg-5">
+                {% csrf_token %}
+                {{formulario.as_p}}
+                <div class="form-group text-center text-md-right mt-3">
+                  <button type="submit"name="btmjs" class="button button-contactForm">Enviar mensaje</button>
+                </div>
+               </div>
+            </div>
+          </form>
+            <input class="form-control" name="name" id="name" type="text" placeholder="Introduzca su nombre">
+        -->
+        
+    
+        
+          <form class="form-contact contact_form" action="" method="POST" id="contactForm" >
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="form-group">
+                  <label for="" class="form-group">Introduzca su nombre</label>
+                  {{formulario.nombre}}
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-group">Dirección de correo</label>
+                  {{formulario.correo}}
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-group">Ingresar Asunto</label>
+                  {{formulario.asunto}}
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="form-group">
+                  <label for="" class="form-group">Ingresar mensaje</label>
+                    {{formulario.mensaje}}
+                    <span class="form-group">
+                      {% if 'hola' in request.GET %}
+                        <span class="alert alert-success">Hemos recibido tu mensaje</span>
+                      {% endif %}
+                      {% if 'fail' in request.GET %}
+                      <span class="alert alert-success">Hemos recibido tu mensaje</span>
+                    {% endif %}
+                    </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center text-md-right mt-3">
+              <button type="submit" class="button button-contactForm">Enviar mensaje</button>
+            </div>
+          </form>
+          {{request.POST}}
+      
+
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %} 
